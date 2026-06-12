@@ -1,0 +1,28 @@
+:root{
+    --color-fondo-modal: #fdf9f6;
+    --color-fondo-primario-atras: #00000080;
+    --color-sombra-modal: #00000033;
+}
+
+.contenedorModal {
+    /* Hacemos todo la vista ocupar todo el espacio, y lo bajamos con z-index para que se vea lo que está debajo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-fondo-primario-atras);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.contenidoModal{
+    /* Esta es la caja del modal */
+    background-color: var(--color-fondo-modal);
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px var(--color-sombra-modal);
+}
