@@ -17,7 +17,7 @@ db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS TAREAS (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         titulo VARCHAR(100) NOT NULL,
-        description TEXT,
+        descripcion TEXT,
         estado TEXT NOT NULL CHECK(estado IN ('Por hacer', 'En progreso', 'Terminado'))    )`, (err) => {
         if (err) {
             console.error('Error al crear la tabla de tareas:', err.message);

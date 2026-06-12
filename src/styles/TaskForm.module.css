@@ -1,0 +1,57 @@
+:root{
+    --color-boton-guardar: #3A10E5;
+    --color-boton-cancelar: #6B778C;
+    --color-borde-input: #ccc;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.labelFormulario {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputFormulario {
+    padding: 10px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: 4px;
+}
+
+.selectFormulario {
+    padding: 10px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: 4px;
+}
+
+.buttonGuardar {
+    padding: 10px 20px;
+    background-color: var(--color-boton-guardar);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonCancelar {
+    padding: 10px 20px;
+    background-color: var(--color-boton-cancelar);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.textareaDescripcion {
+    resize: none;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: 4px;
+}
+
+
