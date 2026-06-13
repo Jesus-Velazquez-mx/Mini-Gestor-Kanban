@@ -4,12 +4,12 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import styles from '../styles/TaskFormContainer.module.css'
 
-function TaskFormContainer({tareaAEditar, onClose}) {
+function TaskFormContainer({tareaAEditar, onClose, onTareaGuardada, estado}) {
     const [tarea, setTarea] = useState({
         id: null,
         titulo: '',
         descripcion: '',
-        estado: 'Por hacer'
+        estado: estado || 'Por hacer'    
     });
 
     /* En caso de que se renderice el componente con una tarea a editar */
@@ -28,11 +28,11 @@ function TaskFormContainer({tareaAEditar, onClose}) {
             /* Si la tarea tiene un ID, es una edición; de lo contrario, es una creación */
             /* axios.metodoHTTP(url, body)*/
             if(tarea.id){
-                await axios.put(`http://localhost:3000/api/tareas/${tarea.id}`, tarea);
+                await axios.put(`/api/tareas/${tarea.id}`, tarea);
                 toast.success('Tarea editada con éxito');
                 console.log('Tarea editada con éxito' , tarea);
             }else{
-                await axios.post('http://localhost:3000/api/tareas', tarea);
+                await axios.post('/api/tareas', tarea);
                 toast.success('Tarea creada con éxito');
                 console.log('Tarea creada con éxito' , tarea);
             }
@@ -44,6 +44,12 @@ function TaskFormContainer({tareaAEditar, onClose}) {
             descripcion: '',
             estado: 'Por hacer'
         });
+
+        /* Llamamos manualmente a la función que tiene el useEffect si es que llegó algo(se mandó como prop)*/
+        if (onTareaGuardada){
+            onTareaGuardada();
+        }
+
         /* Cerramos el formulario después de enviar la tarea */
         onClose();
 
@@ -62,6 +68,7 @@ function TaskFormContainer({tareaAEditar, onClose}) {
             [target.name]: target.value
         });
     }
+
 
     return (
         <div className={styles.contenedorModal}>

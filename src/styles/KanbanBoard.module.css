@@ -1,0 +1,16 @@
+.contenedorPrincipal{
+    padding: 10px;
+    
+ 
+}
+
+
+.tablero{
+    padding: 10px; 
+    display: flex; 
+    gap: 18px; 
+    align-items: flex-start; 
+    overflow-x: auto;
+    justify-content: space-between;
+    
+}

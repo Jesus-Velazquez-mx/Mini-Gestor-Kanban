@@ -1,0 +1,21 @@
+.contenedorColumna{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+}
+
+.columna{
+
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.columna h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
