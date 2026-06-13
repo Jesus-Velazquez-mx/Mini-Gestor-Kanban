@@ -1,0 +1,40 @@
+
+.tarjeta {
+    background-color: #FFFFFF; 
+    border: 1px solid #10162F;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: none; 
+    cursor: pointer;
+    /* Transición suave para el hover */
+    transition: all 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-2px) translateX(-2px);
+    box-shadow: 4px 4px 0px #10162F; 
+}
+
+.tarjeta h1 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+}
+
+.estado {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #F4F5F7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
