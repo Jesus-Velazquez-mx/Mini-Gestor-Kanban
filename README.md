@@ -1,16 +1,33 @@
-# React + Vite
+# 📋 Mini Gestor Kanban
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un gestor de tareas Full-Stack moderno e interactivo, diseñado para la organización visual de proyectos mediante la metodología Kanban. Esta aplicación permite crear, editar, mover (Drag & Drop) y administrar tareas, con persistencia de datos y la capacidad de exportar reportes a Excel. 
 
-Currently, two official plugins are available:
+El proyecto está completamente contenerizado y configurado con un pipeline de integración continua para su despliegue automatizado en la nube.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías y Arquitectura
 
-## React Compiler
+**Frontend (Interfaz de Usuario):**
+* **React + Vite:** Construcción de UI rápida y modular.
+* **Axios:** Cliente HTTP para la comunicación con la API.
+* **ExcelJS & File-Saver:** Generación y descarga de reportes XLSX desde el navegador.
+* **React-Toastify:** Notificaciones visuales de éxito y error.
+* **CSS Modules:** Estilos encapsulados por componente.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend (API RESTful):**
+* **Node.js + Express:** Servidor web y enrutamiento.
+* **SQLite3:** Base de datos relacional ligera implementada con consultas parametrizadas para prevenir inyecciones SQL.
+* **Zod:** Validación estricta de esquemas de datos en los endpoints.
+* **CORS:** Gestión segura de recursos de origen cruzado.
 
-## Expanding the ESLint configuration
+**DevOps & Despliegue (Nube):**
+* **Docker:** Creación de imágenes y aislamiento del entorno de ejecución.
+* **GitHub Actions:** Pipeline CI/CD que compila el frontend, construye la imagen de Docker y la envía a Docker Hub automáticamente en cada push a la rama principal.
+* **AWS EC2 (Ubuntu):** Servidor de producción en Amazon Web Services, utilizando volúmenes de Docker para asegurar la persistencia física del archivo `.sqlite`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Estructura del Proyecto
+
+La aplicación sigue un modelo de arquitectura limpia separando las responsabilidades:
+* `/src/components` y `/src/containers`: Lógica de presentación y estado de React.
+* `/src/server/server.js`: Punto de entrada de la aplicación Express y configuración de estáticos.
+* `/src/routes` y `/src/controllers`: Definición de endpoints REST y lógica de negocio.
+* `/src/database`: Instanciación y definición de las tablas SQL.
