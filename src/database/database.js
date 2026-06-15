@@ -2,7 +2,7 @@ import sqlite3 from 'sqlite3';
 
 /* Regresa la instancia de la base de datos y la abre. Si no está disponible, la crea */
 /* new sqlite3.Database(filename [, mode] [, callback])*/
-const db = new sqlite3.Database('./kanban.db', (err) => {
+const db = new sqlite3.Database('./data/kanban.sqlite', (err) => {
     if (err) {
         console.error('Error abriendo la base de datos:', err.message);
     } else {
