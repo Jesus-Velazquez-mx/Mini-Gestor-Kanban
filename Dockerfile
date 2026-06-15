@@ -23,4 +23,4 @@ RUN mkdir -p data
 EXPOSE 3000
 
 # 9. Comando final para encender el servidor (cambia 'app.js' por 'server.js' o el nombre de tu archivo principal si es diferente)
-CMD ["node", "app.js"]
+CMD ["node", "src/server/server.js"]
