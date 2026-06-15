@@ -1,9 +1,32 @@
 .contenedorPrincipal{
     padding: 10px;
-    
- 
+    display: flex;
+    flex-direction: column;
 }
 
+.contenedorTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloTablero{
+    font-size: 3rem; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #1e293b 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0px 4px 6px rgba(79, 70, 229, 0.2));
+    margin-bottom: 1rem;
+}
+
+.botonExportar{
+    display: flex;
+    justify-content:flex-start
+}
 
 .tablero{
     padding: 10px; 
