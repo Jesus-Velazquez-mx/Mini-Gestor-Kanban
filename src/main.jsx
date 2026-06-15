@@ -5,7 +5,7 @@ import App from './App.jsx'
 import axios from 'axios';
 
 /* Url base para las peticiones*/
-axios.defaults.baseURL = 'http://localhost:3000'; 
+//axios.defaults.baseURL = 'http://localhost:3000'; 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
